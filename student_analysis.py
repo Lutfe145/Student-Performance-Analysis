@@ -45,7 +45,7 @@ print("\n===== GENDER-WISE PERFORMANCE =====")
 gender_avg = df.groupby("sex")["G3"].mean()
 print(gender_avg)
 
-# Histogram
+
 plt.figure(figsize=(8, 5))
 plt.hist(df["G3"], bins=10)
 plt.title("Distribution of Final Grades")
@@ -54,7 +54,7 @@ plt.ylabel("Frequency")
 plt.savefig("histogram.png")
 plt.show()
 
-# Scatter Plot
+
 plt.figure(figsize=(8, 5))
 plt.scatter(df["studytime"], df["G3"])
 plt.title("Study Time vs Final Grade")
@@ -63,7 +63,7 @@ plt.ylabel("Final Grade")
 plt.savefig("scatterplot.png")
 plt.show()
 
-# Bar Chart
+
 plt.figure(figsize=(8, 5))
 gender_avg.plot(kind="bar")
 plt.title("Average Grade by Gender")
